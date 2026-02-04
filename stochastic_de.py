@@ -18,5 +18,9 @@ x = np.zeros(n)
 for i in range(n-1):
 	x[i+1] = x[i] + dt*(-(x[i]-mu)/tau) + sigma_bis*sqrdt*np.random.rand()
 
-plt.plot(t,x)
-plt.show()
+plt.plot(t,x,'g')
+plt.xlabel("$t$")
+plt.ylabel("$x(t)$")
+plt.grid(True)
+plt.savefig("Stochastic_proc.png")
+#plt.show()
